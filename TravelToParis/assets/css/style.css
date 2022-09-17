@@ -1,0 +1,734 @@
+/* RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* make sure to set some focus styles for accessibility */
+:focus {
+  outline: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  max-width: 100%;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden] {
+  display: none;
+}
+html {
+  font-size: 100%; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%; /* 2 */
+}
+a:focus {
+  outline: thin dotted;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+img {
+  border: 0; /* 1 */
+  -ms-interpolation-mode: bicubic; /* 2 */
+}
+figure {
+  margin: 0;
+}
+form {
+  margin: 0;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0; /* 1 */
+  padding: 0;
+  white-space: normal; /* 2 */
+  *margin-left: -7px; /* 3 */
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%; /* 1 */
+  margin: 0; /* 2 */
+  vertical-align: baseline; /* 3 */
+  *vertical-align: middle; /* 3 */
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+  *overflow: visible;  /* 4 */
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+  *height: 13px; /* 3 */
+  *width: 13px; /* 3 */
+}
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto; /* 1 */
+  vertical-align: top; /* 2 */
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+
+/* PADDINGS INSIDE */
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+/* WRAPPER */
+.wrapper {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+
+/* prompt-regular - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('../fonts/prompt-v10-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('../fonts/prompt-v10-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* prompt-600 - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+  url('../fonts/prompt-v10-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('../fonts/prompt-v10-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+
+/* lato-regular - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('../fonts/lato-v23-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('../fonts/lato-v23-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+.background {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 0px;
+  top: 0px;
+}
+
+.dark {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 0px;
+  top: 0px;
+
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+.logot {
+  position: absolute;
+  width: 121px;
+  height: 66px;
+  left: 40px;
+  top: 23px;
+}
+
+.glass1 {
+ box-sizing: border-box;
+ position: absolute;
+ width: 1784px;
+ height: 110px;
+ left: 0px;
+ top: 0px;
+ background: linear-gradient(106.51deg, rgba(255, 255, 255, 0.05) 3.44%, rgba(255, 255, 255, 0.02) 64.82%);
+ backdrop-filter: blur(30px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 24px;
+}
+
+
+.traveller_type {
+ position: absolute;
+ left: 387px;
+ top: 42px;
+
+ font-family: 'Lato';
+ font-style: normal;
+ font-weight: 600;
+ font-size: 24px;
+ line-height: 28px;
+/* identical to box height, or 117% */
+
+text-transform: capitalize;
+
+color: #FFFFFF;
+}
+
+.vector1 {
+  position: absolute;
+  left: 600px;
+  top: 52px;
+}
+
+.couple {
+  position: absolute;
+  left: 669px;
+  top: 42px;
+
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+/* identical to box height, or 117% */
+
+text-transform: capitalize;
+
+color: #FFFFFF;
+}
+
+.vector2 {
+  position: absolute;
+  left: 780px;
+  top: 52px;
+}
+
+
+.program {
+  position: absolute;
+  left: 852px;
+  top: 42px;
+
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+/* identical to box height, or 117% */
+
+text-transform: capitalize;
+
+color: #FFFFFF;
+}
+
+.vector3 {
+  position: absolute;
+  left: 990px;
+  top: 52px;
+}
+
+.lorem {
+  position: absolute;
+  left: 1076px;
+  top: 42px;
+
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+/* identical to box height, or 117% */
+
+text-transform: capitalize;
+
+color: #FFFFFF;
+}
+
+.vector4 {
+  position: absolute;
+  left: 1250px;
+  top: 52px;
+}
+
+
+.set_location {
+  position: absolute;
+  left: 1331px;
+  top: 41px;
+
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+/* identical to box height, or 117% */
+
+text-transform: capitalize;
+
+color: #FFFFFF;
+
+}
+
+.vector5 {
+  position: absolute;
+  left: 1520px;
+  top: 52px;
+}
+
+
+.sing {
+  position: absolute;
+  left: 1808px;
+  top: 41px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+/* identical to box height */
+
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
+
+.glass2 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 136px;
+  height: 968px;
+  left: 1784px;
+  top: 110px;
+  background: linear-gradient(106.51deg, rgba(255, 255, 255, 0.05) 3.44%, rgba(255, 255, 255, 0.02) 64.82%);
+  backdrop-filter: blur(30px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 24px;
+}
+
+.home {
+  position: absolute;
+  left: 1810px;
+  top: 401px;
+
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+/* identical to box height */
+
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
+
+.guide {
+  position: absolute;
+  left: 1810px;
+  top: 446px;
+
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+/* identical to box height */
+
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
+
+.places {
+  position: absolute;
+  left: 1804px;
+  top: 491px;
+
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+/* identical to box height */
+
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
+
+.line {
+  position: absolute;
+  width: 50px;
+  height: 0px;
+  left: 1823px;
+  top: 525px;
+  border: 2px solid #FFFFFF;
+}
+
+.food {
+  position: absolute;
+  width: 71px;
+  height: 29px;
+  left: 1812px;
+  top: 536px;
+
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+/* identical to box height */
+
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
+
+.glass3 {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 790px;
+  height: 500px;
+  left: 32px;
+  top: 309px;
+
+  background: linear-gradient(106.51deg, rgba(255, 255, 255, 0.05) 3.44%, rgba(255, 255, 255, 0.02) 64.82%);
+  backdrop-filter: blur(30px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 24px;
+}
+
+
+h1 {
+  position: absolute;
+  left: 91px;
+  top: 348px;
+
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 145px;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+h2 {
+  position: absolute;
+  left: 96px;
+  top: 482px;
+
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 43px;
+  text-transform: capitalize;
+
+  color: #FFFFFF;
+}
+
+.text {
+  position: absolute;
+  left: 96px;
+  top: 565px;
+
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+/* or 135% */
+
+text-transform: capitalize;
+
+color: #FFFFFF;
+}
+
+
+.glass4 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 727px;
+  height: 304px;
+  left: 1025px;
+  top: 309px;
+
+  background: linear-gradient(106.51deg, rgba(255, 255, 255, 0.05) 3.44%, rgba(255, 255, 255, 0.02) 64.82%);
+  backdrop-filter: blur(30px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 24px;
+}
+
+.vc {
+  position: absolute;
+  left: 1072px;
+  top: 372px;
+
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 43px;
+  text-transform: capitalize;
+
+  color: #FFFFFF;
+}
+
+
+.ellipse1 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 102px;
+  height: 102px;
+  left: 1076px;
+  top: 456px;
+}
+
+
+.ellipse2 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 102px;
+  height: 102px;
+  left: 1449px;
+  top: 454px;
+}
+
+
+.text2 {
+  position: absolute;
+  left: 1194px;
+  top: 476px;
+
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+/* identical to box height */
+
+text-transform: capitalize;
+
+color: rgba(255, 255, 255, 0.7);
+
+}
+
+.text3 {
+  position: absolute;
+  left: 1571px;
+  top: 476px;
+
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+/* identical to box height */
+
+text-transform: capitalize;
+
+color: rgba(255, 255, 255, 0.7);
+}
+
+.price {
+  position: absolute;
+  left: 1194px;
+  top: 513px;
+
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+/* identical to box height */
+
+text-transform: capitalize;
+
+color: #FFFFFF;
+}
+
+.price2 {
+  position: absolute;
+
+  left: 1571px;
+  top: 513px;
+
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+/* identical to box height */
+
+text-transform: capitalize;
+
+color: #FFFFFF;
+}
+
+.plane {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  left: 1108px;
+  top: 488px;
+}
+
+.bed {
+  position: absolute;
+  width: 48px;
+  height: 42px;
+  left: 1476px;
+  top: 486px;
+}
+
