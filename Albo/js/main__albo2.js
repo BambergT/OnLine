@@ -1,25 +1,3 @@
-$(document).ready(function(){
-  $('.slider').slick({
-    arrows:true,
-    // dots:true,
-    slidesToShow:2,
-    autoplay:true,
-    speed:1000,
-    autoplaySpeed:8000,
-    responsive:[
-      {
-        breakpoint: 980,
-        settings: {
-          slidesToShow:1
-        }
-      },
-    ]
-  });
-});
-
-
-
-
 // BURGER HANDLER START
 
 (function () {
@@ -43,4 +21,3 @@ $(document).ready(function(){
 }());
 
 // BURGER HANDLER END
-
